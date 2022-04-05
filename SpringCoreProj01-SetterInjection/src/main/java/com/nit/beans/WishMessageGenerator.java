@@ -14,18 +14,18 @@ public class WishMessageGenerator {
 		this.date = date;
 		System.out.println("WishMessageGenerator.setDate()");
 	}
-	
+
 	public String generateWishMessage() {
 		int hours = date.getHours();
 		String msg = null;
-		if (hours<12 && hours>6) {
-			return msg="Good Morning";
-		}else if (hours>12 && hours<18) {
-			return msg="Good Afternoon";
-		}else if (hours>18) {
-			return msg="Good Evening";
+		if (hours < 12 && hours > 6) {
+			return msg = "Good Morning";
+		} else if (hours > 12 && hours < 18) {
+			return msg = "Good Afternoon";
+		} else if (hours > 18) {
+			return msg = "Good Evening";
 		}
-		return msg; 
+		return msg;
 	}
 
 }
