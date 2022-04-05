@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!--Dependent bean Configuration -->
+	<bean id="dt" class="java.util.Date" />
+	<bean id="dt1" class="java.util.Date">
+		<property name="year" value="120" /><!-- setter injection -->
+	</bean>
+
+	<!-- Target Bean configuration -->
+	<bean id="wmg" class="com.nt.beans.WishMessageGenerator">
+		<property name="date" ref="dt" /><!-- setter injection -->
+		<constructor-arg name="date" ref="dt1" /><!-- Constructor injection -->
+	</bean>
+
+</beans>
