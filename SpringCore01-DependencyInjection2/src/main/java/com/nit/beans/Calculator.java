@@ -2,8 +2,8 @@ package com.nit.beans;
 
 public class Calculator {
 
-	int a;
-	String c;
+	private int a;
+	private String c;
 
 	public Calculator() {
 		System.out.println("Calculator.Calculator()");
