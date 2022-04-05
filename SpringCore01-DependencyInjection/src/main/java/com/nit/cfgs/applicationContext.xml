@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="calculator1" class="com.nit.beans.Calculator">
+		<property name="b" value="100" />
+		<constructor-arg name="a" value="200"/>
+		<constructor-arg name="c" value="Nazeer"/>
+	</bean>
+	<bean id="calculator2" class="com.nit.beans.Calculator">
+		<constructor-arg name="d" value="200"/>
+	</bean>
+	
+	<bean id="dummyBean" class="com.nit.beans.DummyBean"/>
+
+</beans>
