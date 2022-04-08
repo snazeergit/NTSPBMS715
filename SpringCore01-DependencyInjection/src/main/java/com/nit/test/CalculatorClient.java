@@ -16,10 +16,10 @@ public class CalculatorClient {
 		System.out.println("------------------");
 		
 		//One bean class configured twice with two different bean ids, in one bean ID we have one property uses setter injection and two properties uses constructor injection and in the other bean the only property is configured to use constructor injection
-		Object bean1 = xmlBeanFactory.getBean("calculator1");
+		//Object bean1 = xmlBeanFactory.getBean("calculator1");
 		Object bean2 = xmlBeanFactory.getBean("calculator2");
 		//Object bean = xmlBeanFactory.getBean("dummyBean");
-		Calculator calculator = (Calculator) bean1;
+		Calculator calculator = (Calculator) bean2;
 		System.out.println("+++++++++++++++++++");
 		System.out.println("Sum : " + calculator.performCalculation());
 	}

@@ -7,12 +7,12 @@ public class WishMessageGenerator {
 	private Date date;
 
 	public WishMessageGenerator() {
-		System.out.println("WishMessageGenerator.WishMessageGenerator()");
+		System.out.println("WishMessageGenerator-Default Constructor");
 	}
 
 	public void setDate(Date date) {
 		this.date = date;
-		System.out.println("WishMessageGenerator.setDate()");
+		System.out.println("WishMessageGenerator-Setter method");
 	}
 
 	public String generateWishMessage() {
