@@ -4,32 +4,24 @@ public class Calculator {
 
 	private int a, b,d;
 	private String c;
-	private DummyBean dummy;
 
-	public void setDummy(DummyBean dummy) {
-		this.dummy = dummy;
-		System.out.println("Calculator:: Setter for dummy property");
-	}
-	
 	public Calculator() {
-		System.out.println("Calculator:: Default constructor");
+		System.out.println("Calculator.Calculator()");
 	}
 	public Calculator(int d) {
 		this.d=d;
-		System.out.println("Calculator:: Constructor d");
+		System.out.println("Calculator.Calculator(int d)");
 	}
-	
-	
 
 	public Calculator(int a, String c) {
 		this.a = a;
 		this.c = c;
-		System.out.println("Calculator:: Two-param Constructor");
+		System.out.println("Calculator.Calculator(int a, String c)");
 	}
 
 	public void setB(int b) {
 		this.b = b;
-		System.out.println("Calculator:: Setter method b");
+		System.out.println("Calculator.setB(int b)");
 	}
 
 	public int performCalculation() {
