@@ -14,6 +14,10 @@ public class CalculatorClient {
 		Object bean = factory.getBean("calc");
 		Calculator cal = (Calculator) bean;
 		cal.addition(20, 50);
+		
+		/*DefaultListableBeanFactory factory1 = new DefaultListableBeanFactory();
+		XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(factory1);
+		reader.loadBeanDefinitions("nit/java/cfgs/applicationContext.xml");*/
 
 	}
 }
