@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/jdbc https://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd">
+
+	<!-- DataSoure Config -->
+	<bean id="pDatasource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName"
+			value="oracle.jdbc.driver.OracleDriver" />
+		<property name="url"
+			value="jdbc:oracle:thin:@localhost:1521:xe" />
+		<property name="username" value="system" />
+		<property name="password" value="VMware1" />
+	</bean>
+
+	<!-- DAO config -->
+	<bean id="pDao" class="com.nt.dao.PatientDAOImpl">
+		<constructor-arg name="ds" ref="pDatasource"></constructor-arg>
+	</bean>
+
+	<!-- Service Config -->
+	<bean id="pService" class="com.nt.service.PatientMgmtServiceImpl">
+		<constructor-arg name="dao" ref="pDao"></constructor-arg>
+	</bean>
+
+	<!-- Controller config -->
+	<bean id="controller" class="com.nt.controller.MainController">
+		<constructor-arg name="service" ref="pService"></constructor-arg>
+	</bean>
+
+
+
+</beans>
