@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<!-- DataSource Config -->
+	<bean id="datasource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName"
+			value="oracle.jdbc.driver.OracleDriver" />
+		<property name="url"
+			value="jdbc:oracle:thin:@localhost:1521:xe" />
+		<property name="username" value="system" />
+		<property name="password" value="VMware1" />
+	</bean>
+
+	<!-- DAO Config -->
+	<bean id="empDao" class="com.nt.dao.EmployeeDAOImpl">
+		<constructor-arg name="ds" ref="datasource" />
+	</bean>
+
+	<!-- Service Config -->
+	<bean id="empService" class="com.nt.service.EmployeeServiceImpl">
+		<constructor-arg name="dao" ref="empDao" />
+	</bean>
+
+	<!-- Controller Config -->
+	<bean id="controller" class="com.nt.controller.MainController">
+		<constructor-arg name="service" ref="empService" />
+	</bean>
+
+</beans>
