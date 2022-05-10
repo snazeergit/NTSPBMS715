@@ -9,6 +9,4 @@
 		<constructor-arg name="c" value="Nazeer"/>
 	</bean>
 	
-
-
 </beans>
