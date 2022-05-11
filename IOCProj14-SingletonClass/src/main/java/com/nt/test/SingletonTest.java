@@ -5,10 +5,10 @@ import com.nt.singleton.Printer;
 public class SingletonTest {
 
 	public static void main(String[] args) {
-		Printer p1 = Printer.instance();
+		Printer p1 = Printer.getInstance();
 		p1.print("Nazeer");
 
-		Printer p2 = Printer.instance();
+		Printer p2 = Printer.getInstance();
 		p2.print("Syed");
 		
 		if (p1.hashCode() == p2.hashCode()) {
