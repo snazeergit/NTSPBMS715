@@ -1,9 +1,7 @@
 # NTSPBMS715
 
-The projects being added are part of ongoing learning with Nataraz sir. 
+The repositary is been maintained by -teamNazeer. The projects that are being added are part of ongoing learning Spring basics, Spring boot and microservices.
 
-I'm practising these Spring Core Module Setter Injection and Constructor Injection.
+I will update this file with the list of projects and its description soon for the users ease of understanding.
 
-I will plan to add my daily practise projects to this.
-
-Keep learning keep growing.
+-Team Nazeer
