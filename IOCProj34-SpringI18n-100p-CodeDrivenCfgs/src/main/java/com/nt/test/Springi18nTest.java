@@ -4,7 +4,6 @@ import java.util.Locale;
 import java.util.Scanner;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.nt.config.AppConfig;
 

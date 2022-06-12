@@ -16,7 +16,6 @@ public final class EmployeeServiceImpl implements IEmployeeService {
 
 	@Override
 	public String employeeSalCalculation(EmployeeDTO dto) throws SQLException {
-		// TODO Auto-generated method stub
 		EmployeeBO bo = new EmployeeBO();
 		Double grossSal = dto.getBasicSal() * 1.4;
 		Double netSal = dto.getBasicSal() * 0.8;

@@ -9,10 +9,10 @@ import org.springframework.core.io.ClassPathResource;
 import com.nt.controller.MainController;
 import com.nt.vo.EmployeeVO;
 
+@SuppressWarnings("deprecation")
 public class EmployeeClient {
 
 	public static void main(String[] args) throws Exception {
-		// TODO Auto-generated method stub
 
 		try {
 			EmployeeVO vo = new EmployeeVO();
@@ -23,17 +23,15 @@ public class EmployeeClient {
 			vo.seteAddrs(s.nextLine());
 			System.out.println("Basic Salary : ");
 			vo.setBasicSal(s.nextLine());
-
+			s.close();
 			XmlBeanFactory factory = new XmlBeanFactory(new ClassPathResource("com/nt/cfgs/applicationContext.xml"));
 			MainController controller = factory.getBean("controller", MainController.class);
 			String processEmployeeDetails = controller.processEmployeeDetails(vo);
 			System.out.println(processEmployeeDetails);
 
 		} catch (SQLException se) {
-			// TODO: handle exception
 			se.printStackTrace();
 		} catch (Exception e) {
-			// TODO: handle exception
 			e.printStackTrace();
 		}
 

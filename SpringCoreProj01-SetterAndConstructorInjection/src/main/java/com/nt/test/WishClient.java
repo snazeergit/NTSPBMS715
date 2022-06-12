@@ -9,7 +9,6 @@ import com.nt.beans.WishMessageGenerator;
 public class WishClient {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		FileSystemResource resource = new FileSystemResource("src/main/java/com/nt/cfgs/applicationContext.xml");
 		XmlBeanFactory xmlBeanFactory = new XmlBeanFactory(resource);
 		Object bean = xmlBeanFactory.getBean("wmg");

@@ -18,7 +18,6 @@ public final class PatientDAOImpl implements IPatientDAO {
 
 	@Override
 	public int insertPatientDetails(PatientBO bo) throws SQLException {
-		// TODO Auto-generated method stub
 		int insertQueryResult = 0;
 		try (Connection connection = ds.getConnection();
 				PreparedStatement ps = connection.prepareStatement(PATIENT_INSERT_QUERY);) {
@@ -34,11 +33,9 @@ public final class PatientDAOImpl implements IPatientDAO {
 				System.out.println("Insertion failed");
 			}
 		} catch (SQLException se) {
-			// TODO: handle exception
 			se.printStackTrace();
 			throw se;
 		} catch (Exception e) {
-			// TODO: handle exception
 			e.printStackTrace();
 			throw e;
 		}

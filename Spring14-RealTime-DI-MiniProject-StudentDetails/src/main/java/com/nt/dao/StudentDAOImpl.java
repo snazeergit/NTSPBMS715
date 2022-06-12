@@ -19,7 +19,6 @@ public final class StudentDAOImpl implements IStudentDAO {
 
 	@Override
 	public int insertStudentRecord(StudentBO bo) throws SQLException, Exception {
-		// TODO Auto-generated method stub
 		int update = 0;
 		try (Connection connection = ds.getConnection();
 				PreparedStatement ps = connection.prepareStatement(STUDNET_INSERT_QUERY);) {
@@ -31,11 +30,9 @@ public final class StudentDAOImpl implements IStudentDAO {
 			update = ps.executeUpdate();
 
 		} catch (SQLException se) {
-			// TODO: handle exception
 			se.printStackTrace();
 			throw se;
 		} catch (Exception e) {
-			// TODO: handle exception
 			e.printStackTrace();
 			throw e;
 		}

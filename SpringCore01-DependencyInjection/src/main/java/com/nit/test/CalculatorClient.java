@@ -9,7 +9,6 @@ import com.nit.beans.Calculator;
 public class CalculatorClient {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		FileSystemResource resoucFileSystemResource = new FileSystemResource(
 				"src/main/java/com/nit/cfgs/applicationContext.xml");
 		XmlBeanFactory xmlBeanFactory = new XmlBeanFactory(resoucFileSystemResource);

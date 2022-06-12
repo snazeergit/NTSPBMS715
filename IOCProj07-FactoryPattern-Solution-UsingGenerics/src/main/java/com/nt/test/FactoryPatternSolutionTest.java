@@ -1,11 +1,8 @@
 //FactoryPatternSolutionTest.java
 package com.nt.test;
 
-import com.nt.comp.AadharDetails;
 import com.nt.comp.Customer;
 import com.nt.comp.Employee;
-import com.nt.comp.Person;
-import com.nt.comp.Student;
 import com.nt.factory.PersonFactory;
 
 public class FactoryPatternSolutionTest {

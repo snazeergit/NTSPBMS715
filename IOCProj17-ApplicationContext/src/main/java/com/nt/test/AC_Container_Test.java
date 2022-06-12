@@ -3,12 +3,6 @@ package com.nt.test;
 
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.context.support.FileSystemXmlApplicationContext;
-import org.springframework.core.io.ClassPathResource;
-
-import com.nt.comps.Flipkart;
-import com.nt.singleton.Printer;
 
 public class  AC_Container_Test{
 

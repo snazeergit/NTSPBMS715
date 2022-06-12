@@ -7,7 +7,6 @@ public final class FirstFlight implements Courier {
 
 	@Override
 	public String deliver(int orderId) {
-		// TODO Auto-generated method stub
 		return orderId+" order has been assigned to FirstFlight for Delivery";
 	}
 

@@ -10,7 +10,6 @@ public final class BlueDart implements Courier {
 
 	@Override
 	public String deliver(int orderId) {
-		// TODO Auto-generated method stub
 		return orderId + " order has been assigned to BlueDart for Delivery";
 	}
 

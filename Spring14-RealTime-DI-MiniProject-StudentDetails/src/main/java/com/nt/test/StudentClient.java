@@ -11,7 +11,6 @@ import com.nt.vo.StudentVO;
 public class StudentClient {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner s = new Scanner(System.in);
 		StudentVO vo = new StudentVO();
 
@@ -21,6 +20,7 @@ public class StudentClient {
 		vo.setBranch(s.nextLine());
 		System.out.println("Total Marks secured [0 to 1000]: ");
 		vo.setTotalMarks(s.nextLine());
+		s.close();
 
 		DefaultListableBeanFactory factory = new DefaultListableBeanFactory();
 		XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(factory);
@@ -30,7 +30,6 @@ public class StudentClient {
 			String studentDetails = controller.processStudentDetails(vo);
 			System.out.println(studentDetails);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

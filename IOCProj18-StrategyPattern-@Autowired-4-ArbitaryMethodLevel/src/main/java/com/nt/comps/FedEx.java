@@ -7,7 +7,6 @@ public final class FedEx implements Courier {
 
 	@Override
 	public String deliver(int orderId) {
-		// TODO Auto-generated method stub
 		return orderId+" order has been assigned to FedEx for Delivery";
 	}
 

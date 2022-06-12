@@ -11,7 +11,6 @@ public final class DTDC implements Courier {
 
 	@Override
 	public String deliver(int orderId) {
-		// TODO Auto-generated method stub
 		return orderId + " order has been assigned to DTDC for Delivery";
 	}
 

@@ -3,7 +3,6 @@ package com.nt.beans;
 import java.lang.reflect.Method;
 
 import org.springframework.beans.factory.support.MethodReplacer;
-import org.springframework.stereotype.Component;
 
 //@Component("ciaReplacer")
 public class CalculateInterestAmountReplacer implements MethodReplacer {

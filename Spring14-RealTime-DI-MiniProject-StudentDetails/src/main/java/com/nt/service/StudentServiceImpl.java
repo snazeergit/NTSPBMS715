@@ -15,13 +15,11 @@ public final class StudentServiceImpl implements IStudentService {
 	}
 
 	public Float studentPercentageCal(StudentDTO dto) throws NumberFormatException, Exception {
-		// TODO Auto-generated method stub
 		percentage = (dto.getTotalMarks() / 10f);
 		return percentage;
 	}
 
 	public String studentGradeCal(StudentDTO dto) throws Exception {
-		// TODO Auto-generated method stub
 		//Ternary operator
 		//return (percentage>=90)?"First Class with Distinction":(percentage>=80 && percentage<90)?"First Class":(percentage>=70 && percentage<80)?"Second Class":(percentage>=60 && percentage<70)?"Third Class":(percentage>=30 && percentage<60)?"Just Pass":"Failed";
 		if (percentage >= 90) {
@@ -41,7 +39,6 @@ public final class StudentServiceImpl implements IStudentService {
 
 	@Override
 	public String registerStudent(StudentDTO dto) throws Exception {
-		// TODO Auto-generated method stub
 		Float percentCal = studentPercentageCal(dto);
 		String gradeCal = studentGradeCal(dto);
 		StudentBO bo = new StudentBO();

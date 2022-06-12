@@ -18,7 +18,6 @@ public final class EmployeeDAOImpl implements IEmployeeDAO {
 
 	@Override
 	public int insertEmployeeRecord(EmployeeBO bo) throws SQLException {
-		// TODO Auto-generated method stub
 		int update = 0;
 		try (Connection connection = ds.getConnection();
 				PreparedStatement ps = connection.prepareStatement(EMPLOYEE_INSERT_QUERY);) {
@@ -29,11 +28,9 @@ public final class EmployeeDAOImpl implements IEmployeeDAO {
 			ps.setDouble(5, bo.getNetSal());
 			update = ps.executeUpdate();
 		} catch (SQLException se) {
-			// TODO: handle exception
 			se.printStackTrace();
 			throw se;
 		} catch (Exception e) {
-			// TODO: handle exception
 			e.printStackTrace();
 			throw e;
 		}

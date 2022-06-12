@@ -2,9 +2,7 @@ package com.nt.test;
 
 import java.util.Scanner;
 
-import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.core.io.ClassPathResource;
 
 import com.nt.controller.MainController;
 import com.nt.vo.CustomerVO;
@@ -12,9 +10,9 @@ import com.nt.vo.CustomerVO;
 public class RealTimeDIClient {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		ClassPathXmlApplicationContext factory = new ClassPathXmlApplicationContext("com/nt/cfgs/applicationContext.xml");
 		MainController mainController = factory.getBean("controller", MainController.class);
+		factory.close();
 		System.out.println("RealTimeDIClient.main()::controller object has been fetched");
 
 		// try with resources
@@ -37,7 +35,6 @@ public class RealTimeDIClient {
 			System.out.println(processCustomer);
 
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

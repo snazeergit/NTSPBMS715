@@ -7,7 +7,6 @@ public class ReflectionSample {
 
 	public static void main(String[] args) throws ClassNotFoundException, InstantiationException,
 			IllegalAccessException, IllegalArgumentException, InvocationTargetException {
-		// TODO Auto-generated method stub
 
 		Class<?> c = Class.forName("com.nt.test.Test");// loads the Test class dynamically
 		Object object1 = c.newInstance();// default constructor

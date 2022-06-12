@@ -5,9 +5,7 @@ import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.util.Properties;
 
-import com.nt.comps.BlueDart;
 import com.nt.comps.Courier;
-import com.nt.comps.DTDC;
 import com.nt.comps.Flipkart;
 
 public class FlipkartFactory {

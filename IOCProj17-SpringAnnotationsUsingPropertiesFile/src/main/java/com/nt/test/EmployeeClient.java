@@ -8,7 +8,6 @@ import com.nt.beans.Employee;
 public class EmployeeClient {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("com/nt/cfgs/applicationContext.xml");
 		Employee employee = ctx.getBean("emp", Employee.class);
 		System.out.println("Employee Details: " + employee);
@@ -17,6 +16,7 @@ public class EmployeeClient {
 		System.out.println("Employee ID : " + environment.getProperty("emp.id"));
 		System.out.println("Employee Name : " + environment.getProperty("emp.name"));
 		System.out.println("Employee Addrs : " + environment.getProperty("emp.addrs"));
+		ctx.close();
 	}
 
 }

@@ -6,7 +6,6 @@ import com.nt.factory.PersonFactory;
 public class FactoryPatternSolutionTest {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Person person = PersonFactory.getPerson("emp");
 		System.out.println(person);
 		Person person2 = PersonFactory.getPerson("cust");

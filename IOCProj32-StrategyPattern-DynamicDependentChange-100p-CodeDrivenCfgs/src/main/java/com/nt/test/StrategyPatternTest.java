@@ -1,7 +1,6 @@
 package com.nt.test;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.nt.comps.Flipkart;
 import com.nt.config.AppConfig;
@@ -9,7 +8,6 @@ import com.nt.config.AppConfig;
 public class StrategyPatternTest {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 		Flipkart flipkart2 = context.getBean("fkrt", Flipkart.class);
 		String resultMsg = flipkart2.shopping(new String[] { "candles", "flowers", "cake", "wine" },

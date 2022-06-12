@@ -8,10 +8,10 @@ import org.springframework.core.io.ClassPathResource;
 import com.nt.controller.MainController;
 import com.nt.vo.CustomerVO;
 
+@SuppressWarnings("deprecation")
 public class RealTimeDIClient {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		XmlBeanFactory factory = new XmlBeanFactory(new ClassPathResource("com/nt/cfgs/applicationContext.xml"));
 		MainController mainController = factory.getBean("controller", MainController.class);
 		System.out.println("RealTimeDIClient.main()::controller object has been fetched");
@@ -36,7 +36,6 @@ public class RealTimeDIClient {
 			System.out.println(processCustomer);
 
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

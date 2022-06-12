@@ -14,7 +14,6 @@ public final class CustomerMgmtServiceImpl implements ICustomerMgmtService {
 
 	@Override
 	public String registerCustomer(CustomerDTO dto) throws Exception {
-		// TODO Auto-generated method stub
 		System.out.println("CustomerMgmtServiceImpl.registerCustomer()::invoked");
 
 		// Interest calculation

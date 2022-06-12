@@ -15,7 +15,6 @@ public final class PatientMgmtServiceImpl implements IPatientService {
 
 	@Override
 	public String calculateBillAmount(PatientDTO dto) throws SQLException {
-		// TODO Auto-generated method stub
 		double billAmount = (1.18) * dto.getPerDayCharge() * dto.getTotalDaysStayed();
 		PatientBO bo = new PatientBO();
 		bo.setBillAmt(billAmount);

@@ -8,7 +8,6 @@ import com.nt.comp.Student;
 public class FactoryPatternProblemTest {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 		AadharDetails aadhar1 = new AadharDetails(12312L, 32, 7829930782L);
 		Employee e1 = new Employee("Nazeer", "Nellore", aadhar1, "Dell", 75000.0);

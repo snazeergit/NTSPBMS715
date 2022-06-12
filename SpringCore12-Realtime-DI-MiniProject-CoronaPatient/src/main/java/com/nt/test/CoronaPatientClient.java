@@ -9,10 +9,10 @@ import org.springframework.core.io.ClassPathResource;
 import com.nt.controller.MainController;
 import com.nt.vo.PatientVO;
 
+@SuppressWarnings("deprecation")
 public class CoronaPatientClient {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner scanner = new Scanner(System.in);
 		PatientVO vo = new PatientVO();
 		System.out.println("Patient name : ");
@@ -23,17 +23,15 @@ public class CoronaPatientClient {
 		vo.setPerDayCharge(scanner.nextLine());
 		System.out.println("Total days stayed : ");
 		vo.setTotalDaysStayed(scanner.nextLine());
-
+		scanner.close();
 		XmlBeanFactory factory = new XmlBeanFactory(new ClassPathResource("com/nt/cfgs/applicationContext.xml"));
 		MainController controller = factory.getBean("controller", MainController.class);
 		try {
 			String processPatientDetails = controller.processPatientDetails(vo);
 			System.out.println(processPatientDetails);
 		} catch (SQLException se) {
-			// TODO Auto-generated catch block
 			se.printStackTrace();
 		} catch (Exception e) {
-			// TODO: handle exception
 			e.printStackTrace();
 		}
 

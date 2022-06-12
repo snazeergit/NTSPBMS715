@@ -2,10 +2,7 @@ package com.nt.test;
 
 import java.util.Scanner;
 
-import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.core.io.ClassPathResource;
 
 import com.nt.config.AppConfig;
 import com.nt.controller.MainController;
@@ -14,7 +11,6 @@ import com.nt.vo.CustomerVO;
 public class RealTimeDIClient {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		AnnotationConfigApplicationContext factory = new AnnotationConfigApplicationContext(AppConfig.class);
 		MainController mainController = factory.getBean("controller", MainController.class);
 		System.out.println("RealTimeDIClient.main()::controller object has been fetched");
@@ -37,9 +33,9 @@ public class RealTimeDIClient {
 
 			String processCustomer = mainController.processCustomer(vo);
 			System.out.println(processCustomer);
+			factory.close();
 
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

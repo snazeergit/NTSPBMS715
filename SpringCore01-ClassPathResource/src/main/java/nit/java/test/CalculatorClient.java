@@ -5,6 +5,7 @@ import org.springframework.core.io.ClassPathResource;
 
 import nit.java.beans.Calculator;
 
+@SuppressWarnings("deprecation")
 public class CalculatorClient {
 	public static void main(String[] args) {
 		ClassPathResource classpath = new ClassPathResource("nit/java/cfgs/applicationContext.xml");

@@ -7,7 +7,6 @@ import com.nt.comps.Flipkart;
 public class StrategyPatternTest {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
 				"com/nt/config/applicationContext.xml");
 		Flipkart flipkart2 = context.getBean("flipkart", Flipkart.class);

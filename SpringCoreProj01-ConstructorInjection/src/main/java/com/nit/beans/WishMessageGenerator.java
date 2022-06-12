@@ -11,6 +11,7 @@ public class WishMessageGenerator {
 		System.out.println("WishMessageGenerator.WishMessageGenerator(Date)");
 	}
 	
+	@SuppressWarnings("deprecation")
 	public String generateWishMessage() {
 		int hours = date.getHours();
 		String msg = null;

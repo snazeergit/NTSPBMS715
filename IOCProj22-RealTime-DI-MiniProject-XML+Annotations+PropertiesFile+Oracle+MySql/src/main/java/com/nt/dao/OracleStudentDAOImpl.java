@@ -7,8 +7,6 @@ import java.sql.SQLException;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import com.nt.bo.StudentBO;
@@ -31,7 +29,6 @@ public final class OracleStudentDAOImpl implements IStudentDAO {
 
 	@Override
 	public int insertStudentRecord(StudentBO bo) throws SQLException, Exception {
-		// TODO Auto-generated method stub
 		int update = 0;
 		try (Connection connection = ds.getConnection();
 				PreparedStatement ps = connection.prepareStatement(STUDNET_INSERT_QUERY);) {
@@ -43,11 +40,9 @@ public final class OracleStudentDAOImpl implements IStudentDAO {
 			update = ps.executeUpdate();
 
 		} catch (SQLException se) {
-			// TODO: handle exception
 			se.printStackTrace();
 			throw se;
 		} catch (Exception e) {
-			// TODO: handle exception
 			e.printStackTrace();
 			throw e;
 		}

@@ -20,7 +20,6 @@ public final class CustomerDAOImpl implements ICustomerDAO {
 
 	@Override
 	public int insertCustomerRecord(CustomerBO bo) throws Exception {
-		// TODO Auto-generated method stub
 		System.out.println("CustomerDAOImpl.insertCustomerRecord()::invoked");
 		int insertResult = 0;
 		// get pooled jdbc connection
@@ -39,11 +38,9 @@ public final class CustomerDAOImpl implements ICustomerDAO {
 				System.err.println("Customer record insertion to database failed");
 			}
 		} catch (SQLException se) {
-			// TODO: handle exception
 			se.printStackTrace();
 			throw se;
 		} catch (Exception e) {
-			// TODO: handle exception
 			e.printStackTrace();
 			throw e;
 		}
