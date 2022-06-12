@@ -7,7 +7,7 @@ import org.springframework.context.support.ResourceBundleMessageSource;
 @Configuration
 public class AppConfig {
 
-	@Bean("messageSource")
+	@Bean("messageSource")//Fixed bean id
 	public ResourceBundleMessageSource createRBMS() {
 		System.out.println("AppConfig.createRBMS()");
 		ResourceBundleMessageSource msrb = new ResourceBundleMessageSource();
