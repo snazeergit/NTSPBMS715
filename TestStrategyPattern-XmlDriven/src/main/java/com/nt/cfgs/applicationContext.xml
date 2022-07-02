@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="yesBank" class="com.nt.beans.YesBank" />
+
+	<bean id="hdfcBank" class="com.nt.beans.HDFCBank" />
+
+	<bean id="iciciBank" class="com.nt.beans.ICICIBank" />
+
+	<bean id="utilDate" class="java.util.Date" />
+
+	<bean id="moneyTransfer"
+		class="com.nt.beans.WestronUnionMoneyTransfer">
+		<property name="bank" ref="yesBank" />
+		<property name="date" ref="utilDate"/>
+	</bean>
+
+</beans>
