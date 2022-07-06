@@ -7,18 +7,13 @@ import javax.annotation.PreDestroy;
 
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.stereotype.Component;
 
-@Component("voting")
 @PropertySource("com/nt/commons/info.properties")
 public class VoteEligibilityCheckingService implements InitializingBean, DisposableBean {
 
-	@Value("${name}")
 	private String name;
 
-	@Value("${age}")
 	private int age;
 
 	private Date verifiedOn;
@@ -36,6 +31,7 @@ public class VoteEligibilityCheckingService implements InitializingBean, Disposa
 	}
 
 	//Approch-1--------------------------------------------------
+	//Configured as init life cycle method
 	public void myInit() {
 		System.out.println("init()Approch-1--------");
 		System.out.println("name: " + name + " age: " + age);
