@@ -11,13 +11,19 @@ import org.springframework.stereotype.Component;
 @PropertySource(value = "classpath:com/nt/commons/info.properties")
 public class Cricketer implements ApplicationContextAware {
 
-	private ApplicationContext applicationContext;
-
 	@Value("${cktr.name}")
 	private String name;
 
 	@Value("${cktr.jersyNo}")
 	private int jersyNo;
+
+	private ApplicationContext applicationContext;
+
+	@Override
+	public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+		System.out.println("Cricketer.setApplicationContext()");
+		this.applicationContext = applicationContext;
+	}
 
 	public Cricketer() {
 		System.out.println("Cricketer::0-param constructor");
@@ -46,9 +52,4 @@ public class Cricketer implements ApplicationContextAware {
 		System.out.println(name + " with jersy number " + jersyNo + " has scored unbeaten '" + runs + "' runs");
 	}
 
-	@Override
-	public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-		System.out.println("Cricketer.setApplicationContext()");
-		this.applicationContext = applicationContext;
-	}
 }
