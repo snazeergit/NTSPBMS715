@@ -8,8 +8,8 @@
 	
 	<bean id="bankService" class="com.nt.beans.BankService">
 
-		<!-- Comment the replaced-method, original calculateInterestAmount() will 
-			executed in we uncomment then reimplement() will be invoked -->
+		<!-- If we comment the below replaced-method tag block,then the original calculateInterestAmount() from BankService Class will 
+			executed. If we do not uncomment then reimplement() from CalculateInterestAmountReplacer class will be invoked -->
 		<replaced-method name="calculateInterestAmount"
 			replacer="ciaReplacer">
 			<arg-type>double</arg-type>
