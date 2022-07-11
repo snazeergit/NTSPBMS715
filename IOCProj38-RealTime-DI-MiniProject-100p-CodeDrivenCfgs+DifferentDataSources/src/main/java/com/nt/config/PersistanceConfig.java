@@ -22,6 +22,7 @@ public class PersistanceConfig {
 	@Bean(name = "dmDS")
 	public DataSource createDMDS() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
+		//getting the database details from properties file
 		dataSource.setDriverClassName(env.getRequiredProperty("jdbc.driverClassName"));
 		dataSource.setUrl(env.getRequiredProperty("jdbc.url"));
 		dataSource.setUsername(env.getRequiredProperty("jdbc.username"));
@@ -34,6 +35,7 @@ public class PersistanceConfig {
 	@Bean(name = "dbcpDS")
 	public DataSource createDBCP2DS() {
 		BasicDataSource dbcpDS = new BasicDataSource();
+		//getting the database details from properties file
 		dbcpDS.setDriverClassName(env.getRequiredProperty("jdbc.driverClassName"));
 		dbcpDS.setUrl(env.getRequiredProperty("jdbc.url"));
 		dbcpDS.setUsername(env.getRequiredProperty("jdbc.username"));
@@ -48,6 +50,7 @@ public class PersistanceConfig {
 	@Bean(name = "hikaricpDS")
 	public DataSource createHCPDS() {
 		HikariDataSource hikaricpDS = new HikariDataSource();
+		//getting the database details from properties file
 		hikaricpDS.setDriverClassName(env.getRequiredProperty("jdbc.driverClassName"));
 		hikaricpDS.setJdbcUrl(env.getRequiredProperty("jdbc.url"));
 		hikaricpDS.setUsername(env.getRequiredProperty("jdbc.username"));
