@@ -45,7 +45,6 @@ public class WishMessageGenerator {
 			return msg = "Good Evening";
 		}
 		
-		
 		return msg;
 	}
 
