@@ -9,10 +9,10 @@ public class Calculator {
 		this.b = b;
 	}
 
-	public void addition(int x, int y) {
+	public int addition(int x, int y) {
 		a = a + x;
 		b = b + y;
-		System.out.println("Addition :" + (a + b));
+		return (a + b);
 	}
 
 }
