@@ -8,14 +8,16 @@ public class ReflectionSample {
 	public static void main(String[] args) throws ClassNotFoundException, InstantiationException,
 			IllegalAccessException, IllegalArgumentException, InvocationTargetException {
 
-		Class<?> c = Class.forName("com.nt.test.Test");// loads the Test class dynamically
+		Class<?> c = Class.forName("com.nt.test.Test1");// loads the Test class dynamically
 		Object object1 = c.newInstance();// default constructor
 		System.out.println("Object1: " + object1);
 
 		Constructor<?>[] constructors = c.getDeclaredConstructors();
+		constructors[0].setAccessible(true);
 		Object object2 = constructors[0].newInstance();// default constructor
 		System.out.println("Object2: " + object2);
 
+		constructors[1].setAccessible(true);
 		Object object3 = constructors[1].newInstance(10, 20);// 2-param constructor
 		System.out.println("Object3: " + object3);
 

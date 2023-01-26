@@ -4,11 +4,11 @@ public class Test1 {
 	private int a, b;
 
 	public Test1() {
-		System.out.println("Test::Default Constructor");
+		System.out.println("Test1::Default Constructor");
 	}
 
-	public Test1(int a, int b) {
-		System.out.println("Test:: 2-param constructor");
+	private Test1(int a, int b) {
+		System.out.println("Test1:: 2-param constructor");
 		this.a = a;
 		this.b = b;
 	}
@@ -16,7 +16,7 @@ public class Test1 {
 	@Override
 	public String toString() {
 		System.out.println("ToString method");
-		return "Test [a=" + a + ", b=" + b + "]";
+		return "Test1 [a=" + a + ", b=" + b + "]";
 	}
 
 	public int printSum() {
