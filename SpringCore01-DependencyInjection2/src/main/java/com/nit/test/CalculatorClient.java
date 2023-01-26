@@ -12,7 +12,7 @@ public class CalculatorClient {
 		FileSystemResource resoucFileSystemResource = new FileSystemResource(
 				"src/main/java/com/nit/cfgs/applicationContext.xml");
 		XmlBeanFactory xmlBeanFactory = new XmlBeanFactory(resoucFileSystemResource);
-		System.out.println("------------------");
+		xmlBeanFactory.getBean("db");
 		Object bean = xmlBeanFactory.getBean("calculator");
 		Calculator calculator1 = (Calculator) bean;
 		calculator1.printProperties();
