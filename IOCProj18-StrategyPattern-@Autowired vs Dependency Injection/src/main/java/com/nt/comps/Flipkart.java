@@ -7,9 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
 public final class Flipkart {
-	/*Here we have configured courier property of FLipkart spring bean with setter and constructor injection and @Autowired 
-	Spring IOC container will choose @Autowired with ByType injection as the Flipkart spring <bean> tag in not having <Property> tag 
-	or <constructor-arg> tag 	
+	/*Here we have configured courier property of FLipkart spring bean with setter and constructor injection and @Autowired(field level), 
+	 then dependent bean that is configured with setter injection will take effect. 
 	*/
 
 	@Autowired
@@ -34,7 +33,7 @@ public final class Flipkart {
 
 	//Business method
 	public String shopping(String[] items, double[] prices) {
-		System.out.println("FLipkart.shopping(--)");
+		System.out.println("Flipkart.shopping(--)");
 		double billAmt = 0.0;
 		for (double d : prices) {
 			billAmt += d;
