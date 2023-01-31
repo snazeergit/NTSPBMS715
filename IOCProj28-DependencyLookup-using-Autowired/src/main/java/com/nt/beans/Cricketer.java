@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @PropertySource(value = "classpath:com/nt/commons/info.properties")
 public class Cricketer {//implements ApplicationContextAware {
 	@Autowired
-	private ApplicationContext applicationContext;
+	private ApplicationContext applicationContext;// This will be injected with ApplicationContext container that is created as part of DependencyLookupTest Client application
 
 	@Value("${cktr.name}")
 	private String name;
