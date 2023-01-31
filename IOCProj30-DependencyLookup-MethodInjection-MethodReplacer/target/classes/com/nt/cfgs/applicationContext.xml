@@ -4,20 +4,19 @@
 	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd
 		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context-4.3.xsd">
-	<bean id="ciaReplacer"
-		class="com.nt.beans.CalculateInterestAmountReplacer" />
+	
+	<bean id="ciaReplacer" class="com.nt.beans.CalculateInterestAmountReplacer" />
 
 	<bean id="bankService" class="com.nt.beans.BankService">
 
-		<!-- If we comment the below replaced-method tag block,then the original calculateInterestAmount() from BankService Class will 
-			executed. If we do not uncomment then reimplement() from CalculateInterestAmountReplacer class will be invoked -->
-		<replaced-method name="calculateInterestAmount"
-			replacer="ciaReplacer">
+		<!-- If we comment the below replaced-method tag block,then the original calculateInterestAmount() from BankService class get 
+			executed. If we do not uncomment then reimplement() method from CalculateInterestAmountReplacer class will get executed -->
+		<replaced-method name="calculateInterestAmount" replacer="ciaReplacer">
 			<arg-type>double</arg-type>
 			<arg-type>double</arg-type>
 			<arg-type>double</arg-type>
 		</replaced-method>
+		
 	</bean>
-	<!-- <context:component-scan base-package="com.nt" /> -->
-
+	
 </beans>

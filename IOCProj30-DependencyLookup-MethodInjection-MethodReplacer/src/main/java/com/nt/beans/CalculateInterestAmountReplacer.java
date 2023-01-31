@@ -4,7 +4,6 @@ import java.lang.reflect.Method;
 
 import org.springframework.beans.factory.support.MethodReplacer;
 
-//@Component("ciaReplacer")
 public class CalculateInterestAmountReplacer implements MethodReplacer {
 
 	@Override
