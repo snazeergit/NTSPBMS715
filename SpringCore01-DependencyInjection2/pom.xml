@@ -5,10 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>nit</groupId>
-  <artifactId>SpringCore01-DependencyInjection</artifactId>
+  <artifactId>IOCProj03-ConstructorInjection-Research</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
-  <name>SpringCore01-DependencyInjection</name>
+  <name>IOCProj03-ConstructorInjection-Research</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 

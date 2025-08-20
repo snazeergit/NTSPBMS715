@@ -11,4 +11,17 @@
 		<constructor-arg name="c" value="Nazeer" />
 	</bean>
 	
+	<bean id="mb" class="com.nit.beans.MyBean" />
+	
 </beans>
+
+<!-- 
+Important:
+BeanFactory container performs lazy loading or it can NOT pre-instantiate spring beans with singleton scope.
+when you run this application you don't see DummyBean and MyBean objects getting created by container unless
+1. you invoke them by getBean('db') or getBean('mb');
+2. configure them as dependent beans to any target bean then they will be instantiated.
+
+If we are using ApplicationContext Container which has pre-instantiation capability for singleton beans 
+these two beans will be pre-instantiated, no need do above 1,2 points.
+ -->
