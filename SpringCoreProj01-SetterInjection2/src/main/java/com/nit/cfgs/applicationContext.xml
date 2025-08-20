@@ -5,7 +5,7 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<!--Dependent bean Configuration -->
-	<bean id="dt" class="java.util.Date" />
+	<bean id="dt" class="com.nit.beans.MyDate" />
 
 	<!-- Target Bean configuration -->
 	<bean id="wmg" class="com.nit.beans.WishMessageGenerator">
